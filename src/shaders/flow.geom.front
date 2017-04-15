@@ -1,0 +1,5 @@
+#version 120
+#extension GL_EXT_geometry_shader4 : enable
+
+vec2 function(float x, float y, float t) {
+	return vec2(

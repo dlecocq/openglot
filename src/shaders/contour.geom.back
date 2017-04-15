@@ -1,0 +1,103 @@
+;
+}
+
+void main() {
+
+	int i;
+	int j;
+	
+	float x;
+	float y;
+	
+	x = gl_PositionIn[0].x;
+	y = gl_PositionIn[0].y;
+	
+	float dx;
+	float dy;
+	
+	int count = 1;
+	
+	float atxy;
+	float atxdxy;
+	float atxdxydy;
+	float atxydy;
+	
+	float midxy;
+	float midxydy;
+	float midyx;
+	float midyxdx;
+
+	int ct;
+
+	dx = (gl_PositionIn[1].x - gl_PositionIn[0].x) / count;
+	dy = (gl_PositionIn[1].y - gl_PositionIn[0].y) / count;
+
+	for (i = 0; i < count; ++i) {
+		x = i * dx + gl_PositionIn[0].x;
+		for (j = 0; j < count; ++j) {
+			y = j * dy + gl_PositionIn[0].y;
+			atxy 			= function(x   , y	 , 0);
+			atxdxy 		= function(x+dx, y	 , 0);
+			atxdxydy 	= function(x+dx, y+dy, 0);
+			atxydy 		= function(x   , y+dy, 0);
+
+			midxy 		= (x * atxdxy 	- (x + dx) * atxy		) / (atxdxy 	- atxy	);
+			midxydy 	= (x * atxdxydy - (x + dx) * atxydy	) / (atxdxydy - atxydy);
+			midyx 		= (y * atxydy 	- (y + dy) * atxy		) / (atxydy 	- atxy	);
+			midyxdx 	= (y * atxdxydy - (y + dy) * atxdxy	) / (atxdxydy - atxdxy);
+	
+			ct = (int(atxy > 0) * 8) + (int(atxdxy > 0) * 4) + (int(atxdxydy > 0) * 2) + int(atxydy > 0);
+			if (ct == 1 || ct == 14) {
+					gl_Position = gl_ModelViewProjectionMatrix * vec4(midxydy, y + dy, 0.0, 1.0);
+					EmitVertex();
+					gl_Position = gl_ModelViewProjectionMatrix * vec4(x, midyx, 0.0, 1.0);
+					EmitVertex();
+			} else if (ct == 2 || ct == 13) {
+					gl_Position = gl_ModelViewProjectionMatrix * vec4(midxydy, y + dy, 0.0, 1.0);
+					EmitVertex();
+					gl_Position = gl_ModelViewProjectionMatrix * vec4(x + dx, midyxdx, 0.0, 1.0);
+					EmitVertex();
+			} else if (ct == 3 || ct == 12) {
+					gl_Position = gl_ModelViewProjectionMatrix * vec4(x, midyx, 0.0, 1.0);
+					EmitVertex();
+					gl_Position = gl_ModelViewProjectionMatrix * vec4(x + dx, midyxdx, 0.0, 1.0);
+					EmitVertex();
+			} else if (ct == 4 || ct == 11) {
+					gl_Position = gl_ModelViewProjectionMatrix * vec4(midxy, y, 0.0, 1.0);
+					EmitVertex();
+					gl_Position = gl_ModelViewProjectionMatrix * vec4(x + dx, midyxdx, 0.0, 1.0);
+					EmitVertex();
+			} else if (ct == 5 || ct == 10) {
+					gl_Position = gl_ModelViewProjectionMatrix * vec4(x, midyx, 0.0, 1.0);
+					EmitVertex();
+					gl_Position = gl_ModelViewProjectionMatrix * vec4(midxy, y, 0.0, 1.0);
+					EmitVertex();
+					gl_Position = gl_ModelViewProjectionMatrix * vec4(midxydy, y + dy, 0.0, 1.0);
+					EmitVertex();
+					gl_Position = gl_ModelViewProjectionMatrix * vec4(x + dx, midyxdx, 0.0, 1.0);
+					EmitVertex();
+			} else if (ct == 6 || ct == 9) {
+					gl_Position = gl_ModelViewProjectionMatrix * vec4(midxy, y, 0.0, 1.0);
+					EmitVertex();
+					gl_Position = gl_ModelViewProjectionMatrix * vec4(midxydy, y + dy, 0.0, 1.0);
+					EmitVertex();
+			} else if (ct == 7 || ct == 8) {
+					gl_Position = gl_ModelViewProjectionMatrix * vec4(x, midyx, 0.0, 1.0);
+					EmitVertex();
+					gl_Position = gl_ModelViewProjectionMatrix * vec4(midxy, y, 0.0, 1.0);
+					EmitVertex();
+			}
+		}
+	}
+	
+	//for (i = 0; i < 10; i++) {
+	//	m = (i * h) + a;
+	//	gl_Position = gl_ModelViewProjectionMatrix * vec4(m, function(m, 0.0, 0.0), 0.0, 1.0);
+	//	EmitVertex();
+	//}
+	
+	//gl_Position = gl_ModelViewProjectionMatrix * vec4(b, function(b, 0.0, 0.0), 0.0, 1.0);
+	//EmitVertex();
+		
+	EndPrimitive();
+}

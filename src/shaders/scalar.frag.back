@@ -1,0 +1,29 @@
+;
+	value = (value + 1.0) / 2.0;
+	
+	value = 1.0 - value;
+	float red = 1.0;
+	float green = 1.0;
+	float blue = 0.0;
+	
+	if (value > 0.75) {
+		red = 0.0;
+		green = (1.0 - value) * 4.0;
+		blue = 1.0;
+	} else if (value > 0.5) {
+		red = (0.75 - value) * 4.0;
+		green = 1.0;
+		blue = (value - 0.5) * 4.0;
+	} else if (value > 0.25) {
+		red = 1.0;
+		green = 0.25 + value * 2.0;
+	} else {
+		red = 1.0;
+		green = 3.0 * value;
+	}
+	//red
+
+	//col = vec4(red, green, blue, 1.0);
+	
+	gl_FragColor = vec4(red, green, blue, 0.8);
+}
