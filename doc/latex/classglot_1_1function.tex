@@ -1,0 +1,94 @@
+\section{glot::function Class Reference}
+\label{classglot_1_1function}\index{glot::function@{glot::function}}
+{\tt \#include $<$function.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef double($\ast$ {\bf double\_\-function} )(double x)
+\begin{CompactList}\small\item\em A double-to-double mapping. \item\end{CompactList}\item 
+typedef double($\ast$ {\bf double\_\-2d\_\-1d\_\-function} )(double x, double y)
+\begin{CompactList}\small\item\em A 2D to 1D mapping \doxyref{function}{p.}{classglot_1_1function}. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf function} ({\bf double\_\-function} f)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+{\bf function} ({\bf double\_\-2d\_\-1d\_\-function} f)
+\item 
+double {\bf eval} (double x) const 
+\begin{CompactList}\small\item\em Evaluate the \doxyref{function}{p.}{classglot_1_1function} at a \doxyref{point}{p.}{classglot_1_1point}. \item\end{CompactList}\item 
+double {\bf eval} (double x, double y) const 
+\end{CompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\index{glot::function@{glot::function}!double\_\-2d\_\-1d\_\-function@{double\_\-2d\_\-1d\_\-function}}
+\index{double\_\-2d\_\-1d\_\-function@{double\_\-2d\_\-1d\_\-function}!glot::function@{glot::function}}
+\subsubsection[{double\_\-2d\_\-1d\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}typedef double($\ast$ {\bf glot::function::double\_\-2d\_\-1d\_\-function})(double x, double y)}\label{classglot_1_1function_91d4be64f7117589838ac0b3fe9b23b1}
+
+
+A 2D to 1D mapping \doxyref{function}{p.}{classglot_1_1function}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]- the x parameter \item[{\em y}]- the y parameter \end{description}
+\end{Desc}
+\index{glot::function@{glot::function}!double\_\-function@{double\_\-function}}
+\index{double\_\-function@{double\_\-function}!glot::function@{glot::function}}
+\subsubsection[{double\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}typedef double($\ast$ {\bf glot::function::double\_\-function})(double x)}\label{classglot_1_1function_3f6044874b0c63c9e94fdfc9efdc3c0f}
+
+
+A double-to-double mapping. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]- for a given x, return another double\end{description}
+\end{Desc}
+Just a mapping of R1 onto R1, using any C++ code meeting that definition 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{glot::function@{glot::function}!function@{function}}
+\index{function@{function}!glot::function@{glot::function}}
+\subsubsection[{function}]{\setlength{\rightskip}{0pt plus 5cm}glot::function::function ({\bf double\_\-function} {\em f})\hspace{0.3cm}{\tt  [inline]}}\label{classglot_1_1function_a64607fe978be9a1bb7755f7b3e7ec77}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em f}]- a \doxyref{function}{p.}{classglot_1_1function} \end{description}
+\end{Desc}
+\index{glot::function@{glot::function}!function@{function}}
+\index{function@{function}!glot::function@{glot::function}}
+\subsubsection[{function}]{\setlength{\rightskip}{0pt plus 5cm}glot::function::function ({\bf double\_\-2d\_\-1d\_\-function} {\em f})\hspace{0.3cm}{\tt  [inline]}}\label{classglot_1_1function_7f68aea2102bedbf8bd767a2f9f0fe84}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{glot::function@{glot::function}!eval@{eval}}
+\index{eval@{eval}!glot::function@{glot::function}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}double glot::function::eval (double {\em x}, \/  double {\em y}) const\hspace{0.3cm}{\tt  [inline]}}\label{classglot_1_1function_d7f50ab65cf1a71769e11685cc5e10ea}
+
+
+\index{glot::function@{glot::function}!eval@{eval}}
+\index{eval@{eval}!glot::function@{glot::function}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}double glot::function::eval (double {\em x}) const\hspace{0.3cm}{\tt  [inline]}}\label{classglot_1_1function_a4ba49f5a09aa9c64b44e708d3839af9}
+
+
+Evaluate the \doxyref{function}{p.}{classglot_1_1function} at a \doxyref{point}{p.}{classglot_1_1point}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]- the x value at which to evaluate \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf function.h}\end{CompactItemize}

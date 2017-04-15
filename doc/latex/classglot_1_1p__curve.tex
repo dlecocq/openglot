@@ -1,0 +1,144 @@
+\section{glot::p\_\-curve Class Reference}
+\label{classglot_1_1p__curve}\index{glot::p\_\-curve@{glot::p\_\-curve}}
+\doxyref{p\_\-curve}{p.}{classglot_1_1p__curve}: a parametric \doxyref{curve}{p.}{classglot_1_1curve} to plot  
+
+
+{\tt \#include $<$p\_\-curve.h$>$}
+
+Inheritance diagram for glot::p\_\-curve::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classglot_1_1p__curve}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf p\_\-curve} (const {\bf function} \&x\_\-f, const {\bf function} \&y\_\-f, const {\bf color} \&col, double t0=0, double tf=1)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+{\bf p\_\-curve} ({\bf function::double\_\-function} x\_\-f, {\bf function::double\_\-function} y\_\-f, const {\bf color} \&col, double t0=0, double tf=1)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+double {\bf x} (double t)
+\item 
+double {\bf y} (double t)
+\item 
+void {\bf dl\_\-gen} (const {\bf screen} \&s)
+\begin{CompactList}\small\item\em Display-list generator. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+{\bf color} {\bf c}
+\begin{CompactList}\small\item\em The \doxyref{color}{p.}{classglot_1_1color} of the the \doxyref{primitive}{p.}{classglot_1_1primitive}. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+{\bf function} {\bf x\_\-function}
+\item 
+{\bf function} {\bf y\_\-function}
+\item 
+double {\bf tstart}
+\item 
+double {\bf tfinal}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{p\_\-curve}{p.}{classglot_1_1p__curve}: a parametric \doxyref{curve}{p.}{classglot_1_1curve} to plot 
+
+This class takes two functions that accept doubles and return a double. It then samples t in [0,1] and connects the dots with straight lines
+
+\begin{Desc}
+\item[See also:]\doxyref{grapher}{p.}{classglot_1_1grapher} 
+
+\doxyref{curve}{p.}{classglot_1_1curve} \end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{glot::p\_\-curve@{glot::p\_\-curve}!p\_\-curve@{p\_\-curve}}
+\index{p\_\-curve@{p\_\-curve}!glot::p_curve@{glot::p\_\-curve}}
+\subsubsection[{p\_\-curve}]{\setlength{\rightskip}{0pt plus 5cm}glot::p\_\-curve::p\_\-curve (const {\bf function} \& {\em x\_\-f}, \/  const {\bf function} \& {\em y\_\-f}, \/  const {\bf color} \& {\em col}, \/  double {\em t0} = {\tt 0}, \/  double {\em tf} = {\tt 1})\hspace{0.3cm}{\tt  [inline]}}\label{classglot_1_1p__curve_59b00998f11f0e4eb0102bd8255c0790}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\_\-f}]- the parametric definition of x \item[{\em y\_\-f}]- the parametric definition of y \item[{\em col}]- the \doxyref{color}{p.}{classglot_1_1color} of the \doxyref{curve}{p.}{classglot_1_1curve} \item[{\em t0}]- the beginning of the parameterization \item[{\em tf}]- the end of the parameterization \end{description}
+\end{Desc}
+\index{glot::p\_\-curve@{glot::p\_\-curve}!p\_\-curve@{p\_\-curve}}
+\index{p\_\-curve@{p\_\-curve}!glot::p_curve@{glot::p\_\-curve}}
+\subsubsection[{p\_\-curve}]{\setlength{\rightskip}{0pt plus 5cm}glot::p\_\-curve::p\_\-curve ({\bf function::double\_\-function} {\em x\_\-f}, \/  {\bf function::double\_\-function} {\em y\_\-f}, \/  const {\bf color} \& {\em col}, \/  double {\em t0} = {\tt 0}, \/  double {\em tf} = {\tt 1})\hspace{0.3cm}{\tt  [inline]}}\label{classglot_1_1p__curve_3f5facdd3e24ccd8fb27d60ffa7d913c}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\_\-f}]- the parametric definition of x \item[{\em y\_\-f}]- the parametric definition of y \item[{\em col}]- the \doxyref{color}{p.}{classglot_1_1color} of the \doxyref{curve}{p.}{classglot_1_1curve} \item[{\em t0}]- the beginning of the parameterization \item[{\em tf}]- the end of the parameterization\end{description}
+\end{Desc}
+Instead of declaring functions and a \doxyref{curve}{p.}{classglot_1_1curve}, we anticipate it being useful to just declare a \doxyref{curve}{p.}{classglot_1_1curve} with the functions you've already defined 
+
+\subsection{Member Function Documentation}
+\index{glot::p\_\-curve@{glot::p\_\-curve}!dl\_\-gen@{dl\_\-gen}}
+\index{dl\_\-gen@{dl\_\-gen}!glot::p_curve@{glot::p\_\-curve}}
+\subsubsection[{dl\_\-gen}]{\setlength{\rightskip}{0pt plus 5cm}void glot::p\_\-curve::dl\_\-gen (const {\bf screen} \& {\em s})\hspace{0.3cm}{\tt  [virtual]}}\label{classglot_1_1p__curve_2f746ce9f7acb0dc7b7ff5369219427e}
+
+
+Display-list generator. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em s}]- the \doxyref{screen}{p.}{structscreen} specs\end{description}
+\end{Desc}
+The \doxyref{screen}{p.}{structscreen} stores the dimensions of the plot, etc. and based on that information, this \doxyref{function}{p.}{classglot_1_1function} generates the geometry for the \doxyref{primitive}{p.}{classglot_1_1primitive}. Typically this might be stored in a display list, but that is up to the container class, \doxyref{grapher}{p.}{classglot_1_1grapher} 
+
+Implements {\bf glot::primitive} \doxyref{}{p.}{classglot_1_1primitive_2e8c612e7642561ae3536a865c08a436}.\index{glot::p\_\-curve@{glot::p\_\-curve}!x@{x}}
+\index{x@{x}!glot::p_curve@{glot::p\_\-curve}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}double glot::p\_\-curve::x (double {\em t})}\label{classglot_1_1p__curve_b0a1092393f1ca36228bd2d4d58707f4}
+
+
+\index{glot::p\_\-curve@{glot::p\_\-curve}!y@{y}}
+\index{y@{y}!glot::p_curve@{glot::p\_\-curve}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}double glot::p\_\-curve::y (double {\em t})}\label{classglot_1_1p__curve_8b4d4c45556f00db419720bff1848e71}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{glot::p\_\-curve@{glot::p\_\-curve}!c@{c}}
+\index{c@{c}!glot::p_curve@{glot::p\_\-curve}}
+\subsubsection[{c}]{\setlength{\rightskip}{0pt plus 5cm}{\bf color} {\bf glot::p\_\-curve::c}}\label{classglot_1_1p__curve_e322b3f013f9058bb063c1530e06e451}
+
+
+The \doxyref{color}{p.}{classglot_1_1color} of the the \doxyref{primitive}{p.}{classglot_1_1primitive}. 
+
+
+
+Reimplemented from {\bf glot::primitive} \doxyref{}{p.}{classglot_1_1primitive_ea0f7ab17148686a80fb68230eb09eba}.\index{glot::p\_\-curve@{glot::p\_\-curve}!tfinal@{tfinal}}
+\index{tfinal@{tfinal}!glot::p_curve@{glot::p\_\-curve}}
+\subsubsection[{tfinal}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf glot::p\_\-curve::tfinal}\hspace{0.3cm}{\tt  [protected]}}\label{classglot_1_1p__curve_ab233c380c67f4b6e673d3476d08e9da}
+
+
+\index{glot::p\_\-curve@{glot::p\_\-curve}!tstart@{tstart}}
+\index{tstart@{tstart}!glot::p_curve@{glot::p\_\-curve}}
+\subsubsection[{tstart}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf glot::p\_\-curve::tstart}\hspace{0.3cm}{\tt  [protected]}}\label{classglot_1_1p__curve_ec011983027dcb5ac00c52e6c6b9f2f2}
+
+
+\index{glot::p\_\-curve@{glot::p\_\-curve}!x\_\-function@{x\_\-function}}
+\index{x\_\-function@{x\_\-function}!glot::p_curve@{glot::p\_\-curve}}
+\subsubsection[{x\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf function} {\bf glot::p\_\-curve::x\_\-function}\hspace{0.3cm}{\tt  [protected]}}\label{classglot_1_1p__curve_4f5bbaf2a346656ee808c6f3e00cb679}
+
+
+\index{glot::p\_\-curve@{glot::p\_\-curve}!y\_\-function@{y\_\-function}}
+\index{y\_\-function@{y\_\-function}!glot::p_curve@{glot::p\_\-curve}}
+\subsubsection[{y\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf function} {\bf glot::p\_\-curve::y\_\-function}\hspace{0.3cm}{\tt  [protected]}}\label{classglot_1_1p__curve_b1c4b399e8803f29bc2de9b52c3954ce}
+
+
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf p\_\-curve.h}\end{CompactItemize}

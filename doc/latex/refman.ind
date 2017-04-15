@@ -1,0 +1,194 @@
+\begin{theindex}
+
+  \item {a}
+    \subitem {glot::color}, 10
+  \item {add\_\-curve}
+    \subitem {glot::grapher}, 16
+  \item {add\_\-point}
+    \subitem {glot::grapher}, 16
+  \item {at}
+    \subitem {glot::curve}, 12
+  \item {AXES\_\-KEYS\_\-OFF}
+    \subitem {glot}, 8
+  \item {AXES\_\-KEYS\_\-ON}
+    \subitem {glot}, 8
+  \item {AXES\_\-OFF}
+    \subitem {glot}, 7
+  \item {AXES\_\-ON}
+    \subitem {glot}, 8
+
+  \indexspace
+
+  \item {b}
+    \subitem {glot::color}, 10
+
+  \indexspace
+
+  \item {c}
+    \subitem {glot::curve}, 12
+    \subitem {glot::point}, 20
+  \item {click\_\-function}
+    \subitem {glot::grapher}, 16
+  \item {color}
+    \subitem {glot::color}, 9
+  \item {color.h}, 23
+  \item {curve}
+    \subitem {glot::curve}, 11
+  \item {curve.h}, 24
+
+  \indexspace
+
+  \item {delete\_\-curve}
+    \subitem {glot::grapher}, 17
+  \item {delete\_\-point}
+    \subitem {glot::grapher}, 17
+  \item {display\_\-opt}
+    \subitem {glot}, 7
+  \item {double\_\-function}
+    \subitem {glot::function}, 13
+
+  \indexspace
+
+  \item {eval}
+    \subitem {glot::function}, 13
+
+  \indexspace
+
+  \item {function}
+    \subitem {glot::function}, 13
+  \item {function.h}, 25
+
+  \indexspace
+
+  \item {g}
+    \subitem {glot::color}, 10
+  \item {get\_\-x\_\-coord}
+    \subitem {glot::grapher}, 17
+  \item {get\_\-y\_\-coord}
+    \subitem {glot::grapher}, 17
+  \item {glot}, 7
+    \subitem {AXES\_\-KEYS\_\-OFF}, 8
+    \subitem {AXES\_\-KEYS\_\-ON}, 8
+    \subitem {AXES\_\-OFF}, 7
+    \subitem {AXES\_\-ON}, 8
+    \subitem {display\_\-opt}, 7
+    \subitem {GRID\_\-KEYS\_\-OFF}, 8
+    \subitem {GRID\_\-KEYS\_\-ON}, 8
+    \subitem {GRID\_\-OFF}, 7
+    \subitem {GRID\_\-ON}, 8
+    \subitem {keyboard\_\-opt}, 8
+    \subitem {X\_\-LIN}, 8
+    \subitem {X\_\-LOG}, 8
+    \subitem {Y\_\-LIN}, 8
+    \subitem {Y\_\-LOG}, 8
+    \subitem {ZOOM\_\-KEYS\_\-OFF}, 8
+    \subitem {ZOOM\_\-KEYS\_\-ON}, 8
+  \item {glot::color}, 9
+    \subitem {a}, 10
+    \subitem {b}, 10
+    \subitem {color}, 9
+    \subitem {g}, 10
+    \subitem {r}, 10
+  \item {glot::curve}, 11
+    \subitem {at}, 12
+    \subitem {c}, 12
+    \subitem {curve}, 11
+  \item {glot::function}, 13
+    \subitem {double\_\-function}, 13
+    \subitem {eval}, 13
+    \subitem {function}, 13
+  \item {glot::grapher}, 15
+    \subitem {add\_\-curve}, 16
+    \subitem {add\_\-point}, 16
+    \subitem {click\_\-function}, 16
+    \subitem {delete\_\-curve}, 17
+    \subitem {delete\_\-point}, 17
+    \subitem {get\_\-x\_\-coord}, 17
+    \subitem {get\_\-y\_\-coord}, 17
+    \subitem {initialize}, 17
+    \subitem {keyboard\_\-function}, 16
+    \subitem {redraw}, 18
+    \subitem {run}, 18
+    \subitem {set\_\-click\_\-function}, 18
+    \subitem {set\_\-keyboard\_\-function}, 18
+    \subitem {zoom}, 19
+  \item {glot::point}, 20
+    \subitem {c}, 20
+    \subitem {point}, 20
+    \subitem {x}, 20
+    \subitem {y}, 20
+    \subitem {z}, 21
+  \item {grapher.h}, 26
+  \item {GRID\_\-KEYS\_\-OFF}
+    \subitem {glot}, 8
+  \item {GRID\_\-KEYS\_\-ON}
+    \subitem {glot}, 8
+  \item {GRID\_\-OFF}
+    \subitem {glot}, 7
+  \item {GRID\_\-ON}
+    \subitem {glot}, 8
+
+  \indexspace
+
+  \item {initialize}
+    \subitem {glot::grapher}, 17
+
+  \indexspace
+
+  \item {keyboard\_\-function}
+    \subitem {glot::grapher}, 16
+  \item {keyboard\_\-opt}
+    \subitem {glot}, 8
+
+  \indexspace
+
+  \item {point}
+    \subitem {glot::point}, 20
+  \item {point.h}, 27
+
+  \indexspace
+
+  \item {r}
+    \subitem {glot::color}, 10
+  \item {redraw}
+    \subitem {glot::grapher}, 18
+  \item {run}
+    \subitem {glot::grapher}, 18
+
+  \indexspace
+
+  \item {set\_\-click\_\-function}
+    \subitem {glot::grapher}, 18
+  \item {set\_\-keyboard\_\-function}
+    \subitem {glot::grapher}, 18
+
+  \indexspace
+
+  \item {x}
+    \subitem {glot::point}, 20
+  \item {X\_\-LIN}
+    \subitem {glot}, 8
+  \item {X\_\-LOG}
+    \subitem {glot}, 8
+
+  \indexspace
+
+  \item {y}
+    \subitem {glot::point}, 20
+  \item {Y\_\-LIN}
+    \subitem {glot}, 8
+  \item {Y\_\-LOG}
+    \subitem {glot}, 8
+
+  \indexspace
+
+  \item {z}
+    \subitem {glot::point}, 21
+  \item {zoom}
+    \subitem {glot::grapher}, 19
+  \item {ZOOM\_\-KEYS\_\-OFF}
+    \subitem {glot}, 8
+  \item {ZOOM\_\-KEYS\_\-ON}
+    \subitem {glot}, 8
+
+\end{theindex}

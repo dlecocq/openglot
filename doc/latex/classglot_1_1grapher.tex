@@ -1,0 +1,254 @@
+\section{glot::grapher Class Reference}
+\label{classglot_1_1grapher}\index{glot::grapher@{glot::grapher}}
+\doxyref{grapher}{p.}{classglot_1_1grapher}: an interactive plotter display  
+
+
+{\tt \#include $<$grapher.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef void($\ast$ {\bf keyboard\_\-function} )(unsigned char key, GLint x, GLint y)
+\begin{CompactList}\small\item\em Keyboard event handler typedef. \item\end{CompactList}\item 
+typedef void($\ast$ {\bf click\_\-function} )(GLint button, GLint x, GLint y)
+\begin{CompactList}\small\item\em Click even handler typedef. \item\end{CompactList}\item 
+typedef void($\ast$ {\bf idle\_\-function} )(void)
+\begin{CompactList}\small\item\em The idle \doxyref{function}{p.}{classglot_1_1function} typedef. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static int {\bf initialize} (int argc, char $\ast$$\ast$argv, short int options=AXES\_\-ON$|$GRID\_\-ON$|$X\_\-LIN$|$Y\_\-LIN, short int k\_\-options=ZOOM\_\-KEYS\_\-ON$|$AXES\_\-KEYS\_\-ON$|$GRID\_\-KEYS\_\-ON$|$QUIT\_\-KEYS\_\-ON)
+\begin{CompactList}\small\item\em Initialize the \doxyref{grapher}{p.}{classglot_1_1grapher}. \item\end{CompactList}\item 
+static void {\bf run} ()
+\begin{CompactList}\small\item\em Enter the OpenGL main loop after initialization. \item\end{CompactList}\item 
+static void {\bf redraw} ()
+\begin{CompactList}\small\item\em User-requested redraw. \item\end{CompactList}\item 
+static void {\bf add} ({\bf primitive} \&p)
+\begin{CompactList}\small\item\em Add a \doxyref{primitive}{p.}{classglot_1_1primitive} to the plot. \item\end{CompactList}\item 
+static void {\bf remove} ({\bf primitive} \&p)
+\begin{CompactList}\small\item\em Remove a \doxyref{primitive}{p.}{classglot_1_1primitive} from the plot. \item\end{CompactList}\item 
+static void {\bf add} ({\bf point} \&p)
+\begin{CompactList}\small\item\em Add a \doxyref{point}{p.}{classglot_1_1point} to the plot. \item\end{CompactList}\item 
+static void {\bf remove} ({\bf point} \&p)
+\begin{CompactList}\small\item\em Remove a \doxyref{point}{p.}{classglot_1_1point} from the plot. \item\end{CompactList}\item 
+static void {\bf set\_\-keyboard\_\-function} ({\bf keyboard\_\-function} k)
+\begin{CompactList}\small\item\em Set up a keyboard event handler. \item\end{CompactList}\item 
+static void {\bf set\_\-click\_\-function} ({\bf click\_\-function} c)
+\begin{CompactList}\small\item\em Set up a click event handler. \item\end{CompactList}\item 
+static void {\bf set\_\-idle\_\-function} ({\bf idle\_\-function} i)
+\begin{CompactList}\small\item\em Set the idle \doxyref{function}{p.}{classglot_1_1function} handler. \item\end{CompactList}\item 
+static void {\bf zoom} (double scale)
+\begin{CompactList}\small\item\em Zoom in / out by a scale. \item\end{CompactList}\item 
+static double {\bf get\_\-x\_\-coord} (GLint x)
+\begin{CompactList}\small\item\em Transform a \doxyref{screen}{p.}{structscreen} x coordinate to a world one. \item\end{CompactList}\item 
+static double {\bf get\_\-y\_\-coord} (GLint y)
+\begin{CompactList}\small\item\em Transform a \doxyref{screen}{p.}{structscreen} y coordinate to a world one. \item\end{CompactList}\item 
+static {\bf point} {\bf get\_\-point} (GLint x, GLint y)
+\begin{CompactList}\small\item\em Returns the x, y \doxyref{point}{p.}{classglot_1_1point} clicked on, in plot-space. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{grapher}{p.}{classglot_1_1grapher}: an interactive plotter display 
+
+You might think of this class as a container for all the graphing primitives you plan to plot
+
+\begin{Desc}
+\item[See also:]\doxyref{p\_\-curve}{p.}{classglot_1_1p__curve} 
+
+\doxyref{point}{p.}{classglot_1_1point} 
+
+\doxyref{curve}{p.}{classglot_1_1curve} \end{Desc}
+
+
+\subsection{Member Typedef Documentation}
+\index{glot::grapher@{glot::grapher}!click\_\-function@{click\_\-function}}
+\index{click\_\-function@{click\_\-function}!glot::grapher@{glot::grapher}}
+\subsubsection[{click\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ {\bf glot::grapher::click\_\-function})(GLint button, GLint x, GLint y)}\label{classglot_1_1grapher_c945e6ebe60c3cfeb0b8768c19a4d5c5}
+
+
+Click even handler typedef. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em button}]- GLint button pressed \item[{\em x}]- GLint x coordinate \item[{\em y}]- GLint y coordinate\end{description}
+\end{Desc}
+See set\_\-click\_\-function(...) for more details \index{glot::grapher@{glot::grapher}!idle\_\-function@{idle\_\-function}}
+\index{idle\_\-function@{idle\_\-function}!glot::grapher@{glot::grapher}}
+\subsubsection[{idle\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ {\bf glot::grapher::idle\_\-function})(void)}\label{classglot_1_1grapher_c7676ae32ea15cf6e1a14b4d89279740}
+
+
+The idle \doxyref{function}{p.}{classglot_1_1function} typedef. 
+
+See set\_\-idle\_\-funciton(...) for more details \index{glot::grapher@{glot::grapher}!keyboard\_\-function@{keyboard\_\-function}}
+\index{keyboard\_\-function@{keyboard\_\-function}!glot::grapher@{glot::grapher}}
+\subsubsection[{keyboard\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ {\bf glot::grapher::keyboard\_\-function})(unsigned char key, GLint x, GLint y)}\label{classglot_1_1grapher_e11b07f266aff004839c7558599ce34d}
+
+
+Keyboard event handler typedef. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em key}]- unsigned char \item[{\em x}]- GLint x coordinate \item[{\em y}]- GLint y coordinate\end{description}
+\end{Desc}
+A keyboard event handler accepts a key and x, y coordinates 
+
+\subsection{Member Function Documentation}
+\index{glot::grapher@{glot::grapher}!add@{add}}
+\index{add@{add}!glot::grapher@{glot::grapher}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}static void glot::grapher::add ({\bf point} \& {\em p})\hspace{0.3cm}{\tt  [static]}}\label{classglot_1_1grapher_755971f366a8598dd27e720ffe8e077d}
+
+
+Add a \doxyref{point}{p.}{classglot_1_1point} to the plot. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p}]- The Point you wish to add to the plot\end{description}
+\end{Desc}
+Instantiate a \doxyref{point}{p.}{classglot_1_1point} and then add it to the plot with this \doxyref{function}{p.}{classglot_1_1function}. NOTE: Does not automatically request a redisplay \index{glot::grapher@{glot::grapher}!add@{add}}
+\index{add@{add}!glot::grapher@{glot::grapher}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}static void glot::grapher::add ({\bf primitive} \& {\em p})\hspace{0.3cm}{\tt  [static]}}\label{classglot_1_1grapher_3f3e39caee2ec38dc9c21d6d3c9ed564}
+
+
+Add a \doxyref{primitive}{p.}{classglot_1_1primitive} to the plot. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p}]- the \doxyref{primitive}{p.}{classglot_1_1primitive} to add\end{description}
+\end{Desc}
+Add any \doxyref{primitive}{p.}{classglot_1_1primitive} that inherits from the \doxyref{primitive}{p.}{classglot_1_1primitive} class to the plot. The only requirement is that dl\_\-gen makes the required OpenGL calls to render the geometry. \index{glot::grapher@{glot::grapher}!get\_\-point@{get\_\-point}}
+\index{get\_\-point@{get\_\-point}!glot::grapher@{glot::grapher}}
+\subsubsection[{get\_\-point}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf point} glot::grapher::get\_\-point (GLint {\em x}, \/  GLint {\em y})\hspace{0.3cm}{\tt  [static]}}\label{classglot_1_1grapher_b9ab1757f92269b3f34c47e0ef5881ea}
+
+
+Returns the x, y \doxyref{point}{p.}{classglot_1_1point} clicked on, in plot-space. 
+
+Deprecation likely \index{glot::grapher@{glot::grapher}!get\_\-x\_\-coord@{get\_\-x\_\-coord}}
+\index{get\_\-x\_\-coord@{get\_\-x\_\-coord}!glot::grapher@{glot::grapher}}
+\subsubsection[{get\_\-x\_\-coord}]{\setlength{\rightskip}{0pt plus 5cm}static double glot::grapher::get\_\-x\_\-coord (GLint {\em x})\hspace{0.3cm}{\tt  [static]}}\label{classglot_1_1grapher_28eb9d91df1a3fcfbbae75800311c5e5}
+
+
+Transform a \doxyref{screen}{p.}{structscreen} x coordinate to a world one. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]- the \doxyref{screen}{p.}{structscreen} x coordinate to transform\end{description}
+\end{Desc}
+It's the grapher's responsibility to know how to transform a \doxyref{screen}{p.}{structscreen} coordinate into a world coordinate with this \doxyref{function}{p.}{classglot_1_1function}. \index{glot::grapher@{glot::grapher}!get\_\-y\_\-coord@{get\_\-y\_\-coord}}
+\index{get\_\-y\_\-coord@{get\_\-y\_\-coord}!glot::grapher@{glot::grapher}}
+\subsubsection[{get\_\-y\_\-coord}]{\setlength{\rightskip}{0pt plus 5cm}static double glot::grapher::get\_\-y\_\-coord (GLint {\em y})\hspace{0.3cm}{\tt  [static]}}\label{classglot_1_1grapher_51de9f9fe8d7febf52b3eb02803df8bd}
+
+
+Transform a \doxyref{screen}{p.}{structscreen} y coordinate to a world one. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em y}]- the \doxyref{screen}{p.}{structscreen} y coordinate to transform\end{description}
+\end{Desc}
+It's the grapher's repsonsibility to know how to transform a \doxyref{screen}{p.}{structscreen} coordinate into a world coordinate with this \doxyref{function}{p.}{classglot_1_1function}. \index{glot::grapher@{glot::grapher}!initialize@{initialize}}
+\index{initialize@{initialize}!glot::grapher@{glot::grapher}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}static int glot::grapher::initialize (int {\em argc}, \/  char $\ast$$\ast$ {\em argv}, \/  short int {\em options} = {\tt AXES\_\-ON$|$GRID\_\-ON$|$X\_\-LIN$|$Y\_\-LIN}, \/  short int {\em k\_\-options} = {\tt ZOOM\_\-KEYS\_\-ON$|$AXES\_\-KEYS\_\-ON$|$GRID\_\-KEYS\_\-ON$|$QUIT\_\-KEYS\_\-ON})\hspace{0.3cm}{\tt  [static]}}\label{classglot_1_1grapher_820bee383b1d8d4540377f38755c4b37}
+
+
+Initialize the \doxyref{grapher}{p.}{classglot_1_1grapher}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em argc}]- same as argc used for OpenGL initialization \item[{\em argv}]- same as argv used for OpenGL initialization \item[{\em options}]- startup options \item[{\em k\_\-options}]- the default keyboard actions options\end{description}
+\end{Desc}
+Use a bitwise or to select startup options: AXES\_\-ON, AXES\_\-OFF GRID\_\-ON, GRID\_\-OFF X\_\-LIN, X\_\-LOG (linear x scale or logarithmic) Y\_\-LIN, Y\_\-LOG (linear y scale or logarithmic) \index{glot::grapher@{glot::grapher}!redraw@{redraw}}
+\index{redraw@{redraw}!glot::grapher@{glot::grapher}}
+\subsubsection[{redraw}]{\setlength{\rightskip}{0pt plus 5cm}static void glot::grapher::redraw ()\hspace{0.3cm}{\tt  [static]}}\label{classglot_1_1grapher_3059b797e6369454e302840427cf1056}
+
+
+User-requested redraw. 
+
+If you create an event handler that will make some changes to the graph, you can make those changes and then request a redraw with this \doxyref{function}{p.}{classglot_1_1function}. \index{glot::grapher@{glot::grapher}!remove@{remove}}
+\index{remove@{remove}!glot::grapher@{glot::grapher}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}static void glot::grapher::remove ({\bf point} \& {\em p})\hspace{0.3cm}{\tt  [static]}}\label{classglot_1_1grapher_b21410f759afb3ecfc8e2c74ff732532}
+
+
+Remove a \doxyref{point}{p.}{classglot_1_1point} from the plot. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p}]- The \doxyref{point}{p.}{classglot_1_1point} you wish to remove from the plot\end{description}
+\end{Desc}
+If you've plotted a \doxyref{point}{p.}{classglot_1_1point}, you can remove it from the plot with this \doxyref{function}{p.}{classglot_1_1function}. NOTE: Does not automatically request a redisplay. \index{glot::grapher@{glot::grapher}!remove@{remove}}
+\index{remove@{remove}!glot::grapher@{glot::grapher}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}static void glot::grapher::remove ({\bf primitive} \& {\em p})\hspace{0.3cm}{\tt  [static]}}\label{classglot_1_1grapher_2a89eb6c69bc5101896a050edc5f9e4b}
+
+
+Remove a \doxyref{primitive}{p.}{classglot_1_1primitive} from the plot. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p}]- the \doxyref{primitive}{p.}{classglot_1_1primitive} to remove\end{description}
+\end{Desc}
+Remove a previously-added \doxyref{primitive}{p.}{classglot_1_1primitive} from the plot \index{glot::grapher@{glot::grapher}!run@{run}}
+\index{run@{run}!glot::grapher@{glot::grapher}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}static void glot::grapher::run ()\hspace{0.3cm}{\tt  [static]}}\label{classglot_1_1grapher_0b2131ed9108518ec725887e4ab6d857}
+
+
+Enter the OpenGL main loop after initialization. 
+
+In general, you will set up your event handlers, main code, etc., and then when you've gotten everything in place, you call \doxyref{grapher::run()}{p.}{classglot_1_1grapher_0b2131ed9108518ec725887e4ab6d857} to start the program's OpenGL portion. \index{glot::grapher@{glot::grapher}!set\_\-click\_\-function@{set\_\-click\_\-function}}
+\index{set\_\-click\_\-function@{set\_\-click\_\-function}!glot::grapher@{glot::grapher}}
+\subsubsection[{set\_\-click\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}static void glot::grapher::set\_\-click\_\-function ({\bf click\_\-function} {\em c})\hspace{0.3cm}{\tt  [static]}}\label{classglot_1_1grapher_8f231e0cc424ff02fd27140483b8bd6a}
+
+
+Set up a click event handler. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]- the \doxyref{function}{p.}{classglot_1_1function} you'd like to handle click events\end{description}
+\end{Desc}
+If you'd like to set up a \doxyref{function}{p.}{classglot_1_1function} to handle click events (which are when a user presses down and then releases a button at the same spot), you can register it with this \doxyref{function}{p.}{classglot_1_1function}. NOTE: this is different from a motion \doxyref{function}{p.}{classglot_1_1function}. \index{glot::grapher@{glot::grapher}!set\_\-idle\_\-function@{set\_\-idle\_\-function}}
+\index{set\_\-idle\_\-function@{set\_\-idle\_\-function}!glot::grapher@{glot::grapher}}
+\subsubsection[{set\_\-idle\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}static void glot::grapher::set\_\-idle\_\-function ({\bf idle\_\-function} {\em i})\hspace{0.3cm}{\tt  [static]}}\label{classglot_1_1grapher_23c90782ec374fe9b45fb24c6ce09c32}
+
+
+Set the idle \doxyref{function}{p.}{classglot_1_1function} handler. 
+
+Animation is done by setting the idle\_\-function handler, and this provides the interface. This might be deprecated in favor of an option that just allows the user to turn on animation, which would consist of simply setting OpenGL's idle \doxyref{function}{p.}{classglot_1_1function} to grapher's display \doxyref{function}{p.}{classglot_1_1function}. \index{glot::grapher@{glot::grapher}!set\_\-keyboard\_\-function@{set\_\-keyboard\_\-function}}
+\index{set\_\-keyboard\_\-function@{set\_\-keyboard\_\-function}!glot::grapher@{glot::grapher}}
+\subsubsection[{set\_\-keyboard\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}static void glot::grapher::set\_\-keyboard\_\-function ({\bf keyboard\_\-function} {\em k})\hspace{0.3cm}{\tt  [static]}}\label{classglot_1_1grapher_363838298e124cc4424c5a9ccf22baf9}
+
+
+Set up a keyboard event handler. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em k}]- the \doxyref{function}{p.}{classglot_1_1function} you'd like to handle key events\end{description}
+\end{Desc}
+If you'd like to set up a \doxyref{function}{p.}{classglot_1_1function} to handle key events, you can register them with this \doxyref{function}{p.}{classglot_1_1function}. NOTE: there are default behaviors for certain keys that are not overridden here. For example, '+' zooms in, but if you use that key as well, both a zoom and your operation will take place.
+
+The idea behind this is that these default behaviors are not the programmer's responsibility to code up as well. They are interface freebies.
+
+Bitwise or options together from the set: ZOOM\_\-KEYS\_\-ON / ZOOM\_\-KEYS\_\-OFF AXES\_\-KEYS\_\-ON / AXES\_\-KEYS\_\-OFF GRID\_\-KEYS\_\-ON / GRID\_\-KEYS\_\-OFF \index{glot::grapher@{glot::grapher}!zoom@{zoom}}
+\index{zoom@{zoom}!glot::grapher@{glot::grapher}}
+\subsubsection[{zoom}]{\setlength{\rightskip}{0pt plus 5cm}static void glot::grapher::zoom (double {\em scale})\hspace{0.3cm}{\tt  [static]}}\label{classglot_1_1grapher_b5a455dd251b5fb6e2035d014fd4bdd9}
+
+
+Zoom in / out by a scale. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em scale}]- the scale by which to zoom\end{description}
+\end{Desc}
+This determines the center of the plot as it is now, and scales in / out by a factor of scale outward / inward from that center \doxyref{point}{p.}{classglot_1_1point}. 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf grapher.h}\end{CompactItemize}

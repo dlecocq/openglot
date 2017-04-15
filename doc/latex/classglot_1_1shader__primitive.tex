@@ -1,0 +1,143 @@
+\section{glot::shader\_\-primitive Class Reference}
+\label{classglot_1_1shader__primitive}\index{glot::shader\_\-primitive@{glot::shader\_\-primitive}}
+\doxyref{shader\_\-primitive}{p.}{classglot_1_1shader__primitive}: the parent class of all primitives that use their own shaders  
+
+
+{\tt \#include $<$shader\_\-primitive.h$>$}
+
+Inheritance diagram for glot::shader\_\-primitive::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classglot_1_1shader__primitive}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf shader\_\-primitive} ()
+\begin{CompactList}\small\item\em Default constructor. \item\end{CompactList}\item 
+{\bf shader\_\-primitive} (const {\bf color} \&col)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+virtual {\bf $\sim$shader\_\-primitive} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+void {\bf printProgramInfoLog} (GLuint obj)
+\begin{CompactList}\small\item\em Program linking errors. \item\end{CompactList}\item 
+void {\bf printShaderInfoLog} (GLuint obj)
+\begin{CompactList}\small\item\em Shader compiling errors. \item\end{CompactList}\item 
+string {\bf read\_\-file} (const char $\ast$filename)
+\begin{CompactList}\small\item\em Read in a file. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+GLhandleARB {\bf f}
+\begin{CompactList}\small\item\em Shader source handles. \item\end{CompactList}\item 
+GLhandleARB {\bf g}
+\item 
+GLhandleARB {\bf v}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{shader\_\-primitive}{p.}{classglot_1_1shader__primitive}: the parent class of all primitives that use their own shaders 
+
+This class is the parent of all the primitives that get drawn to the \doxyref{screen}{p.}{structscreen} but use their own shaders. It helps out by providing a few helpful functions for compiling shader programs and reading files and so forth.
+
+\begin{Desc}
+\item[See also:]\doxyref{shader\_\-primitive}{p.}{classglot_1_1shader__primitive} \end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{glot::shader\_\-primitive@{glot::shader\_\-primitive}!shader\_\-primitive@{shader\_\-primitive}}
+\index{shader\_\-primitive@{shader\_\-primitive}!glot::shader_primitive@{glot::shader\_\-primitive}}
+\subsubsection[{shader\_\-primitive}]{\setlength{\rightskip}{0pt plus 5cm}glot::shader\_\-primitive::shader\_\-primitive ()\hspace{0.3cm}{\tt  [inline]}}\label{classglot_1_1shader__primitive_2bacef1be37a4a4805bdbfa8c7679db2}
+
+
+Default constructor. 
+
+\index{glot::shader\_\-primitive@{glot::shader\_\-primitive}!shader\_\-primitive@{shader\_\-primitive}}
+\index{shader\_\-primitive@{shader\_\-primitive}!glot::shader_primitive@{glot::shader\_\-primitive}}
+\subsubsection[{shader\_\-primitive}]{\setlength{\rightskip}{0pt plus 5cm}glot::shader\_\-primitive::shader\_\-primitive (const {\bf color} \& {\em col})\hspace{0.3cm}{\tt  [inline]}}\label{classglot_1_1shader__primitive_1b24678b292e10204f97c7c8c2732a23}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em col}]- the \doxyref{color}{p.}{classglot_1_1color} of the \doxyref{primitive}{p.}{classglot_1_1primitive} \end{description}
+\end{Desc}
+\index{glot::shader\_\-primitive@{glot::shader\_\-primitive}!$\sim$shader\_\-primitive@{$\sim$shader\_\-primitive}}
+\index{$\sim$shader\_\-primitive@{$\sim$shader\_\-primitive}!glot::shader_primitive@{glot::shader\_\-primitive}}
+\subsubsection[{$\sim$shader\_\-primitive}]{\setlength{\rightskip}{0pt plus 5cm}virtual glot::shader\_\-primitive::$\sim$shader\_\-primitive ()\hspace{0.3cm}{\tt  [inline, virtual]}}\label{classglot_1_1shader__primitive_93bfea81ab50ae43ce5c8812654271f0}
+
+
+Destructor. 
+
+Virtual classes need virtual destructors 
+
+\subsection{Member Function Documentation}
+\index{glot::shader\_\-primitive@{glot::shader\_\-primitive}!printProgramInfoLog@{printProgramInfoLog}}
+\index{printProgramInfoLog@{printProgramInfoLog}!glot::shader_primitive@{glot::shader\_\-primitive}}
+\subsubsection[{printProgramInfoLog}]{\setlength{\rightskip}{0pt plus 5cm}void glot::shader\_\-primitive::printProgramInfoLog (GLuint {\em obj})}\label{classglot_1_1shader__primitive_1f240d0f05e89e381c35450390128061}
+
+
+Program linking errors. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em obj}]- the program to talk about\end{description}
+\end{Desc}
+This \doxyref{function}{p.}{classglot_1_1function} prints out information about the linking stage of the GLSL shader program generation. GLSL prefers to fail silently, but provides ways to query back on the status of the linking of the shader program and this provides a way to check on that status in a human-readable format.
+
+I found this helpful \doxyref{function}{p.}{classglot_1_1function} at: {\tt http://www.lighthouse3d.com/opengl/glsl/index.php?oglinfo} \index{glot::shader\_\-primitive@{glot::shader\_\-primitive}!printShaderInfoLog@{printShaderInfoLog}}
+\index{printShaderInfoLog@{printShaderInfoLog}!glot::shader_primitive@{glot::shader\_\-primitive}}
+\subsubsection[{printShaderInfoLog}]{\setlength{\rightskip}{0pt plus 5cm}void glot::shader\_\-primitive::printShaderInfoLog (GLuint {\em obj})}\label{classglot_1_1shader__primitive_8ebd19ffbde159147225a276448e35f1}
+
+
+Shader compiling errors. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em obj}]- the shader to talk about\end{description}
+\end{Desc}
+This \doxyref{function}{p.}{classglot_1_1function} prints out information about the compiling of the GLSL shader. GLSL fails silently, but has a way to the status of the compilation of a shader and this prints out that information.
+
+I found this helpful \doxyref{function}{p.}{classglot_1_1function} at: {\tt http://www.lighthouse3d.com/opengl/glsl/index.php?oglinfo} \index{glot::shader\_\-primitive@{glot::shader\_\-primitive}!read\_\-file@{read\_\-file}}
+\index{read\_\-file@{read\_\-file}!glot::shader_primitive@{glot::shader\_\-primitive}}
+\subsubsection[{read\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}string glot::shader\_\-primitive::read\_\-file (const char $\ast$ {\em filename})}\label{classglot_1_1shader__primitive_a56ca0b59dd09e40d37670ef74ff1bb9}
+
+
+Read in a file. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em filename}]- the name of the file to read\end{description}
+\end{Desc}
+Reads a file, returns a string with the contents of that file. Meant to facilitate reading in the shader source, which is usually stored in a file. 
+
+\subsection{Member Data Documentation}
+\index{glot::shader\_\-primitive@{glot::shader\_\-primitive}!f@{f}}
+\index{f@{f}!glot::shader_primitive@{glot::shader\_\-primitive}}
+\subsubsection[{f}]{\setlength{\rightskip}{0pt plus 5cm}GLhandleARB {\bf glot::shader\_\-primitive::f}\hspace{0.3cm}{\tt  [protected]}}\label{classglot_1_1shader__primitive_36d2a7a1bc7302406c7f0af5b23ed9c9}
+
+
+Shader source handles. 
+
+I'm not entirely sure if it's necessary to store these handles beyond the compiling and then linking the shader program, but these are for that purpose. \index{glot::shader\_\-primitive@{glot::shader\_\-primitive}!g@{g}}
+\index{g@{g}!glot::shader_primitive@{glot::shader\_\-primitive}}
+\subsubsection[{g}]{\setlength{\rightskip}{0pt plus 5cm}GLhandleARB {\bf glot::shader\_\-primitive::g}\hspace{0.3cm}{\tt  [protected]}}\label{classglot_1_1shader__primitive_0681d4187ae1a8cbc8cc729dc48c7b5a}
+
+
+\index{glot::shader\_\-primitive@{glot::shader\_\-primitive}!v@{v}}
+\index{v@{v}!glot::shader_primitive@{glot::shader\_\-primitive}}
+\subsubsection[{v}]{\setlength{\rightskip}{0pt plus 5cm}GLhandleARB {\bf glot::shader\_\-primitive::v}\hspace{0.3cm}{\tt  [protected]}}\label{classglot_1_1shader__primitive_002e1317b915ca6339f2a8b826823b63}
+
+
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf shader\_\-primitive.h}\end{CompactItemize}

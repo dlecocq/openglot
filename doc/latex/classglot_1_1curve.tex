@@ -1,0 +1,85 @@
+\section{glot::curve Class Reference}
+\label{classglot_1_1curve}\index{glot::curve@{glot::curve}}
+\doxyref{curve}{p.}{classglot_1_1curve}: a \doxyref{curve}{p.}{classglot_1_1curve} to plot  
+
+
+{\tt \#include $<$curve.h$>$}
+
+Inheritance diagram for glot::curve::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classglot_1_1curve}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf curve} (string f, const {\bf color} \&col)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+void {\bf dl\_\-gen} (const {\bf screen} \&s)
+\begin{CompactList}\small\item\em Display-list generator. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+{\bf color} {\bf c}
+\begin{CompactList}\small\item\em Color variable. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{curve}{p.}{classglot_1_1curve}: a \doxyref{curve}{p.}{classglot_1_1curve} to plot 
+
+This class takes a \doxyref{function}{p.}{classglot_1_1function} that accepts a double and returns a double and does its best to plot it in the \doxyref{grapher}{p.}{classglot_1_1grapher}.
+
+\begin{Desc}
+\item[See also:]\doxyref{grapher}{p.}{classglot_1_1grapher} 
+
+\doxyref{p\_\-curve}{p.}{classglot_1_1p__curve} \end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{glot::curve@{glot::curve}!curve@{curve}}
+\index{curve@{curve}!glot::curve@{glot::curve}}
+\subsubsection[{curve}]{\setlength{\rightskip}{0pt plus 5cm}glot::curve::curve (string {\em f}, \/  const {\bf color} \& {\em col})\hspace{0.3cm}{\tt  [inline]}}\label{classglot_1_1curve_07edcd368d122ad3585eef52e3775c4e}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em func}]- the \doxyref{function}{p.}{classglot_1_1function} to render \item[{\em col}]- the \doxyref{color}{p.}{classglot_1_1color} of the \doxyref{curve}{p.}{classglot_1_1curve} \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{glot::curve@{glot::curve}!dl\_\-gen@{dl\_\-gen}}
+\index{dl\_\-gen@{dl\_\-gen}!glot::curve@{glot::curve}}
+\subsubsection[{dl\_\-gen}]{\setlength{\rightskip}{0pt plus 5cm}void glot::curve::dl\_\-gen (const {\bf screen} \& {\em s})\hspace{0.3cm}{\tt  [virtual]}}\label{classglot_1_1curve_29cf8bdce745306212af7c147023fba4}
+
+
+Display-list generator. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em s}]- the \doxyref{screen}{p.}{structscreen} specs\end{description}
+\end{Desc}
+The \doxyref{screen}{p.}{structscreen} stores the dimensions of the plot, etc. and based on that information, this \doxyref{function}{p.}{classglot_1_1function} generates the geometry for the \doxyref{primitive}{p.}{classglot_1_1primitive}. Typically this might be stored in a display list, but that is up to the container class, \doxyref{grapher}{p.}{classglot_1_1grapher} 
+
+Implements {\bf glot::primitive} \doxyref{}{p.}{classglot_1_1primitive_2e8c612e7642561ae3536a865c08a436}.
+
+\subsection{Member Data Documentation}
+\index{glot::curve@{glot::curve}!c@{c}}
+\index{c@{c}!glot::curve@{glot::curve}}
+\subsubsection[{c}]{\setlength{\rightskip}{0pt plus 5cm}{\bf color} {\bf glot::curve::c}}\label{classglot_1_1curve_fcd83ec8bb2dbcb8b148a192f0a9c99b}
+
+
+Color variable. 
+
+This is the \doxyref{color}{p.}{classglot_1_1color} the \doxyref{curve}{p.}{classglot_1_1curve} is supposed to take on. 
+
+Reimplemented from {\bf glot::primitive} \doxyref{}{p.}{classglot_1_1primitive_ea0f7ab17148686a80fb68230eb09eba}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf curve.h}\end{CompactItemize}

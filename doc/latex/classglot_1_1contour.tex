@@ -1,0 +1,68 @@
+\section{glot::contour Class Reference}
+\label{classglot_1_1contour}\index{glot::contour@{glot::contour}}
+\doxyref{curve}{p.}{classglot_1_1curve}: a \doxyref{contour}{p.}{classglot_1_1contour} to plot  
+
+
+{\tt \#include $<$contour.h$>$}
+
+Inheritance diagram for glot::contour::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classglot_1_1contour}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf contour} (const string \&{\bf f}, const {\bf color} \&col)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+void {\bf dl\_\-gen} (const {\bf screen} \&scr)
+\begin{CompactList}\small\item\em Display-list generator. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{curve}{p.}{classglot_1_1curve}: a \doxyref{contour}{p.}{classglot_1_1contour} to plot 
+
+This class maps a scalar \doxyref{function}{p.}{classglot_1_1function} of two variables to a 2-d plot showing the iso-curve z = 0
+
+\begin{Desc}
+\item[See also:]\doxyref{grapher}{p.}{classglot_1_1grapher} \end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{glot::contour@{glot::contour}!contour@{contour}}
+\index{contour@{contour}!glot::contour@{glot::contour}}
+\subsubsection[{contour}]{\setlength{\rightskip}{0pt plus 5cm}glot::contour::contour (const string \& {\em f}, \/  const {\bf color} \& {\em col})\hspace{0.3cm}{\tt  [inline]}}\label{classglot_1_1contour_c2efb4c4edc6a8b9c7f4572148e1684d}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em f}]- A \doxyref{function}{p.}{classglot_1_1function} of x, y and t \item[{\em col}]- the \doxyref{color}{p.}{classglot_1_1color} of the \doxyref{curve}{p.}{classglot_1_1curve}\end{description}
+\end{Desc}
+The \doxyref{function}{p.}{classglot_1_1function} may use x, y and t and any combination of C-available functions. Rather, any C-available functions supported by the OpenGL Shading Language (GLSL) which includes most.
+
+NOTE: GLSL is very picky about typecasting. When using integer values use the float equivalent instead: (Use 1.0 not 1, 93.0 not 93) 
+
+\subsection{Member Function Documentation}
+\index{glot::contour@{glot::contour}!dl\_\-gen@{dl\_\-gen}}
+\index{dl\_\-gen@{dl\_\-gen}!glot::contour@{glot::contour}}
+\subsubsection[{dl\_\-gen}]{\setlength{\rightskip}{0pt plus 5cm}void glot::contour::dl\_\-gen (const {\bf screen} \& {\em scr})\hspace{0.3cm}{\tt  [virtual]}}\label{classglot_1_1contour_ad1f9a15676372dfb398e68772f59625}
+
+
+Display-list generator. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em scr}]- The specifications of the \doxyref{screen}{p.}{structscreen}\end{description}
+\end{Desc}
+This returns the geometry appropriate for the geometry shader used here. In this case, it's a set of line segments that specify a bounding square for which the shader should find the iso-curve. That is, a line from (x\_\-min, y\_\-min) to (x\_\-max, y\_\-max) 
+
+Implements {\bf glot::primitive} \doxyref{}{p.}{classglot_1_1primitive_2e8c612e7642561ae3536a865c08a436}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf contour.h}\end{CompactItemize}

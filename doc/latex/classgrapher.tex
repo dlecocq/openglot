@@ -1,0 +1,199 @@
+\section{grapher Class Reference}
+\label{classgrapher}\index{grapher@{grapher}}
+{\tt \#include $<$grapher.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf grapher} (short int options=AXES\_\-ON$|$GRID\_\-ON$|$X\_\-LIN$|$Y\_\-LIN)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static int {\bf initialize} (int argc, char $\ast$$\ast$argv, short int options=AXES\_\-ON$|$GRID\_\-ON$|$X\_\-LIN$|$Y\_\-LIN)
+\begin{CompactList}\small\item\em Initialize the \doxyref{grapher}{p.}{classgrapher}. \item\end{CompactList}\item 
+static void {\bf run} ()
+\begin{CompactList}\small\item\em Enter the OpenGL main loop after initialization. \item\end{CompactList}\item 
+static void {\bf redraw} ()
+\begin{CompactList}\small\item\em User-requested redraw. \item\end{CompactList}\item 
+static void {\bf add\_\-curve} ({\bf curve} \&c)
+\begin{CompactList}\small\item\em Add a \doxyref{curve}{p.}{classcurve} to the plot. \item\end{CompactList}\item 
+static void {\bf delete\_\-curve} ({\bf curve} \&c)
+\begin{CompactList}\small\item\em Delete a \doxyref{curve}{p.}{classcurve} from the plot. \item\end{CompactList}\item 
+static void {\bf add\_\-point} ({\bf point} \&p)
+\begin{CompactList}\small\item\em Add a \doxyref{point}{p.}{classpoint} to the plot. \item\end{CompactList}\item 
+static void {\bf delete\_\-point} ({\bf point} \&p)
+\begin{CompactList}\small\item\em Delete a \doxyref{point}{p.}{classpoint} from the plot. \item\end{CompactList}\item 
+static void {\bf set\_\-keyboard\_\-function} (keyboard\_\-function k)
+\begin{CompactList}\small\item\em Set up a keyboard event handler. \item\end{CompactList}\item 
+static void {\bf set\_\-click\_\-function} (click\_\-function c)
+\begin{CompactList}\small\item\em Set up a click event handler. \item\end{CompactList}\item 
+static void {\bf zoom} (double scale)
+\begin{CompactList}\small\item\em Zoom in / out by a scale. \item\end{CompactList}\item 
+static double {\bf get\_\-x\_\-coord} (GLint x)
+\begin{CompactList}\small\item\em Transform a screen x coordinate to a world one. \item\end{CompactList}\item 
+static double {\bf get\_\-y\_\-coord} (GLint y)
+\begin{CompactList}\small\item\em Transform a screen y coordinate to a world one. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{grapher@{grapher}!grapher@{grapher}}
+\index{grapher@{grapher}!grapher@{grapher}}
+\subsubsection[{grapher}]{\setlength{\rightskip}{0pt plus 5cm}grapher::grapher (short int {\em options} = {\tt AXES\_\-ON$|$GRID\_\-ON$|$X\_\-LIN$|$Y\_\-LIN})}\label{classgrapher_c957986572bbcbb4af070097dc9b0a30}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em options}]- startup options\end{description}
+\end{Desc}
+Use a bitwise or to select startup options: AXES\_\-ON, AXES\_\-OFF GRID\_\-ON, GRID\_\-OFF X\_\-LIN, X\_\-LOG (linear x scale or logarithmic) Y\_\-LIN, Y\_\-LOG (linear y scale or logarithmic)
+
+Warning: Thinking about depricating this function 
+
+\subsection{Member Function Documentation}
+\index{grapher@{grapher}!add\_\-curve@{add\_\-curve}}
+\index{add\_\-curve@{add\_\-curve}!grapher@{grapher}}
+\subsubsection[{add\_\-curve}]{\setlength{\rightskip}{0pt plus 5cm}static void grapher::add\_\-curve ({\bf curve} \& {\em c})\hspace{0.3cm}{\tt  [static]}}\label{classgrapher_2629dae23414c443b6f357f0962ab8b7}
+
+
+Add a \doxyref{curve}{p.}{classcurve} to the plot. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]- The \doxyref{curve}{p.}{classcurve} you wish to add to the plot\end{description}
+\end{Desc}
+If you instantiate a \doxyref{curve}{p.}{classcurve}, you can add it to the plot with this function. NOTE: This does not automatically request a redisplay. The idea here is that you may be adding several curves at once, and so after adding all of your curves, etc., you should then call \doxyref{grapher::redraw()}{p.}{classgrapher_50d956f8492042a488305e9306c3471f} \index{grapher@{grapher}!add\_\-point@{add\_\-point}}
+\index{add\_\-point@{add\_\-point}!grapher@{grapher}}
+\subsubsection[{add\_\-point}]{\setlength{\rightskip}{0pt plus 5cm}static void grapher::add\_\-point ({\bf point} \& {\em p})\hspace{0.3cm}{\tt  [static]}}\label{classgrapher_875bfcc8101ea6aafd31ece1328b06da}
+
+
+Add a \doxyref{point}{p.}{classpoint} to the plot. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p}]- The Point you wish to add to the plot\end{description}
+\end{Desc}
+Instantiate a \doxyref{point}{p.}{classpoint} and then add it to the plot with this function. NOTE: Does not automatically request a redisplay \index{grapher@{grapher}!delete\_\-curve@{delete\_\-curve}}
+\index{delete\_\-curve@{delete\_\-curve}!grapher@{grapher}}
+\subsubsection[{delete\_\-curve}]{\setlength{\rightskip}{0pt plus 5cm}static void grapher::delete\_\-curve ({\bf curve} \& {\em c})\hspace{0.3cm}{\tt  [static]}}\label{classgrapher_4e1df609e99284e76117e41e805d4d2a}
+
+
+Delete a \doxyref{curve}{p.}{classcurve} from the plot. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]- The \doxyref{curve}{p.}{classcurve} you wish to delete from the plot\end{description}
+\end{Desc}
+If you've plotted a \doxyref{curve}{p.}{classcurve}, but wish to remove it, you can do so with this function. As with add\_\-curve(...), this does not automatically request a redisplay. \index{grapher@{grapher}!delete\_\-point@{delete\_\-point}}
+\index{delete\_\-point@{delete\_\-point}!grapher@{grapher}}
+\subsubsection[{delete\_\-point}]{\setlength{\rightskip}{0pt plus 5cm}static void grapher::delete\_\-point ({\bf point} \& {\em p})\hspace{0.3cm}{\tt  [static]}}\label{classgrapher_b113244bfc58339f1b2520f3d2d60194}
+
+
+Delete a \doxyref{point}{p.}{classpoint} from the plot. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p}]- The \doxyref{point}{p.}{classpoint} you wish to delete from the plot\end{description}
+\end{Desc}
+If you've plotted a \doxyref{point}{p.}{classpoint}, you can remove it from the plot with this function. NOTE: Does not automatically request a redisplay. \index{grapher@{grapher}!get\_\-x\_\-coord@{get\_\-x\_\-coord}}
+\index{get\_\-x\_\-coord@{get\_\-x\_\-coord}!grapher@{grapher}}
+\subsubsection[{get\_\-x\_\-coord}]{\setlength{\rightskip}{0pt plus 5cm}static double grapher::get\_\-x\_\-coord (GLint {\em x})\hspace{0.3cm}{\tt  [static]}}\label{classgrapher_a1e989a52cc1f5af906245b3b1a98d81}
+
+
+Transform a screen x coordinate to a world one. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]- the screen x coordinate to transform\end{description}
+\end{Desc}
+It's the grapher's responsibility to know how to transform a screen coordinate into a world coordinate with this function. \index{grapher@{grapher}!get\_\-y\_\-coord@{get\_\-y\_\-coord}}
+\index{get\_\-y\_\-coord@{get\_\-y\_\-coord}!grapher@{grapher}}
+\subsubsection[{get\_\-y\_\-coord}]{\setlength{\rightskip}{0pt plus 5cm}static double grapher::get\_\-y\_\-coord (GLint {\em y})\hspace{0.3cm}{\tt  [static]}}\label{classgrapher_a76ea249ab68b6e3f6f0a06e788de66b}
+
+
+Transform a screen y coordinate to a world one. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em y}]- the screen y coordinate to transform\end{description}
+\end{Desc}
+It's the grapher's repsonsibility to know how to transform a screen coordinate into a world coordinate with this function. \index{grapher@{grapher}!initialize@{initialize}}
+\index{initialize@{initialize}!grapher@{grapher}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}static int grapher::initialize (int {\em argc}, \/  char $\ast$$\ast$ {\em argv}, \/  short int {\em options} = {\tt AXES\_\-ON$|$GRID\_\-ON$|$X\_\-LIN$|$Y\_\-LIN})\hspace{0.3cm}{\tt  [static]}}\label{classgrapher_beb78277d2aa96df698cbf11529c97d8}
+
+
+Initialize the \doxyref{grapher}{p.}{classgrapher}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em argc}]- same as argc used for OpenGL initialization \item[{\em argv}]- same as argv used for OpenGL initialization \item[{\em options}]- startup options\end{description}
+\end{Desc}
+Use a bitwise or to select startup options: AXES\_\-ON, AXES\_\-OFF GRID\_\-ON, GRID\_\-OFF X\_\-LIN, X\_\-LOG (linear x scale or logarithmic) Y\_\-LIN, Y\_\-LOG (linear y scale or logarithmic) \index{grapher@{grapher}!redraw@{redraw}}
+\index{redraw@{redraw}!grapher@{grapher}}
+\subsubsection[{redraw}]{\setlength{\rightskip}{0pt plus 5cm}static void grapher::redraw ()\hspace{0.3cm}{\tt  [static]}}\label{classgrapher_50d956f8492042a488305e9306c3471f}
+
+
+User-requested redraw. 
+
+If you create an event handler that will make some changes to the graph, you can make those changes and then request a redraw with this function. \index{grapher@{grapher}!run@{run}}
+\index{run@{run}!grapher@{grapher}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}static void grapher::run ()\hspace{0.3cm}{\tt  [static]}}\label{classgrapher_227554bd5f29d4d3b6c328048cf7ee49}
+
+
+Enter the OpenGL main loop after initialization. 
+
+In general, you will set up your event handlers, main code, etc., and then when you've gotten everything in place, you call \doxyref{grapher::run()}{p.}{classgrapher_227554bd5f29d4d3b6c328048cf7ee49} to start the program's OpenGL portion. \index{grapher@{grapher}!set\_\-click\_\-function@{set\_\-click\_\-function}}
+\index{set\_\-click\_\-function@{set\_\-click\_\-function}!grapher@{grapher}}
+\subsubsection[{set\_\-click\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}static void grapher::set\_\-click\_\-function (click\_\-function {\em c})\hspace{0.3cm}{\tt  [static]}}\label{classgrapher_5253d702d80d62d6ba316c6b72b9cc40}
+
+
+Set up a click event handler. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]- the function you'd like to handle click events\end{description}
+\end{Desc}
+If you'd like to set up a function to handle click events (which are when a user presses down and then releases a button at the same spot), you can register it with this function. NOTE: this is different from a motion function. \index{grapher@{grapher}!set\_\-keyboard\_\-function@{set\_\-keyboard\_\-function}}
+\index{set\_\-keyboard\_\-function@{set\_\-keyboard\_\-function}!grapher@{grapher}}
+\subsubsection[{set\_\-keyboard\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}static void grapher::set\_\-keyboard\_\-function (keyboard\_\-function {\em k})\hspace{0.3cm}{\tt  [static]}}\label{classgrapher_07c4031d66ba2785ff0d1d2d571c78a4}
+
+
+Set up a keyboard event handler. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em k}]- the function you'd like to handle key events\end{description}
+\end{Desc}
+If you'd like to set up a function to handle key events, you can register them with this function. NOTE: there are default behaviors for certain keys that are not overridden here. For example, '+' zooms in, but if you use that key as well, both a zoom and your operation will take place.
+
+The idea behind this is that these default behaviors are not the programmer's responsibility to code up as well. They are interface freebies.
+
+In future versions, these will be able to be disabled and enabled to suit the end user. \index{grapher@{grapher}!zoom@{zoom}}
+\index{zoom@{zoom}!grapher@{grapher}}
+\subsubsection[{zoom}]{\setlength{\rightskip}{0pt plus 5cm}static void grapher::zoom (double {\em scale})\hspace{0.3cm}{\tt  [static]}}\label{classgrapher_e7857a9590c784f8bd736db980585375}
+
+
+Zoom in / out by a scale. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em scale}]- the scale by which to zoom\end{description}
+\end{Desc}
+This determines the center of the plot as it is now, and scales in / out by a factor of scale outward / inward from that center \doxyref{point}{p.}{classpoint}. 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf grapher.h}\end{CompactItemize}

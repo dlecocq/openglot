@@ -1,0 +1,62 @@
+\section{stopwatch Class Reference}
+\label{classstopwatch}\index{stopwatch@{stopwatch}}
+\doxyref{stopwatch}{p.}{classstopwatch} : encapsulates timing routines  
+
+
+{\tt \#include $<$stopwatch.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf stopwatch} ()
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+void {\bf start} ()
+\begin{CompactList}\small\item\em Start the \doxyref{stopwatch}{p.}{classstopwatch}. \item\end{CompactList}\item 
+double {\bf time} ()
+\begin{CompactList}\small\item\em Get the current time of the \doxyref{stopwatch}{p.}{classstopwatch}. \item\end{CompactList}\item 
+double {\bf stop} ()
+\begin{CompactList}\small\item\em Stop the \doxyref{stopwatch}{p.}{classstopwatch}, get the time. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{stopwatch}{p.}{classstopwatch} : encapsulates timing routines 
+
+This class encapsulates the system's timing functions. I've found that Mac and Linux use very different versions of time.h, and with different clock resolutions. Rather than deal with it in the silly C-style (this is C++ after all), I created a simple \doxyref{stopwatch}{p.}{classstopwatch} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{stopwatch@{stopwatch}!stopwatch@{stopwatch}}
+\index{stopwatch@{stopwatch}!stopwatch@{stopwatch}}
+\subsubsection[{stopwatch}]{\setlength{\rightskip}{0pt plus 5cm}stopwatch::stopwatch ()\hspace{0.3cm}{\tt  [inline]}}\label{classstopwatch_427b7eff0db59c70a0239dc354b4323e}
+
+
+Constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{stopwatch@{stopwatch}!start@{start}}
+\index{start@{start}!stopwatch@{stopwatch}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void stopwatch::start ()}\label{classstopwatch_875bf8a472dff32a8190ec96e7fcf969}
+
+
+Start the \doxyref{stopwatch}{p.}{classstopwatch}. 
+
+Start the timing of the \doxyref{stopwatch}{p.}{classstopwatch}, just records the current WALL TIME. This does not measure anything but the wall time. Not system time, not clock cycles just the wall time. \index{stopwatch@{stopwatch}!stop@{stop}}
+\index{stop@{stop}!stopwatch@{stopwatch}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}double stopwatch::stop ()}\label{classstopwatch_3bfa7f394f995ffa8ef866d1391e97cd}
+
+
+Stop the \doxyref{stopwatch}{p.}{classstopwatch}, get the time. 
+
+This returns the stopwatch's current time and does stop it. Returns the time in seconds as a double \index{stopwatch@{stopwatch}!time@{time}}
+\index{time@{time}!stopwatch@{stopwatch}}
+\subsubsection[{time}]{\setlength{\rightskip}{0pt plus 5cm}double stopwatch::time ()}\label{classstopwatch_4d224136091cc2e66e078ddd09ea4c73}
+
+
+Get the current time of the \doxyref{stopwatch}{p.}{classstopwatch}. 
+
+This returns the stopwatch's current time without stopping it. Returns the time in seconds as a double 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf stopwatch.h}\end{CompactItemize}

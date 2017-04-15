@@ -1,0 +1,66 @@
+\contentsline {chapter}{\numberline {1}Namespace Index}{1}
+\contentsline {section}{\numberline {1.1}Namespace List}{1}
+\contentsline {chapter}{\numberline {2}Class Index}{3}
+\contentsline {section}{\numberline {2.1}Class List}{3}
+\contentsline {chapter}{\numberline {3}File Index}{5}
+\contentsline {section}{\numberline {3.1}File List}{5}
+\contentsline {chapter}{\numberline {4}Namespace Documentation}{7}
+\contentsline {section}{\numberline {4.1}glot Namespace Reference}{7}
+\contentsline {subsection}{\numberline {4.1.1}Enumeration Type Documentation}{7}
+\contentsline {subsubsection}{\numberline {4.1.1.1}display\_\discretionary {-}{}{}opt}{7}
+\contentsline {subsubsection}{\numberline {4.1.1.2}keyboard\_\discretionary {-}{}{}opt}{8}
+\contentsline {chapter}{\numberline {5}Class Documentation}{9}
+\contentsline {section}{\numberline {5.1}glot::color Class Reference}{9}
+\contentsline {subsection}{\numberline {5.1.1}Constructor \& Destructor Documentation}{9}
+\contentsline {subsubsection}{\numberline {5.1.1.1}color}{9}
+\contentsline {subsection}{\numberline {5.1.2}Member Data Documentation}{10}
+\contentsline {subsubsection}{\numberline {5.1.2.1}a}{10}
+\contentsline {subsubsection}{\numberline {5.1.2.2}b}{10}
+\contentsline {subsubsection}{\numberline {5.1.2.3}g}{10}
+\contentsline {subsubsection}{\numberline {5.1.2.4}r}{10}
+\contentsline {section}{\numberline {5.2}glot::curve Class Reference}{11}
+\contentsline {subsection}{\numberline {5.2.1}Constructor \& Destructor Documentation}{11}
+\contentsline {subsubsection}{\numberline {5.2.1.1}curve}{11}
+\contentsline {subsubsection}{\numberline {5.2.1.2}curve}{11}
+\contentsline {subsection}{\numberline {5.2.2}Member Function Documentation}{12}
+\contentsline {subsubsection}{\numberline {5.2.2.1}at}{12}
+\contentsline {subsection}{\numberline {5.2.3}Member Data Documentation}{12}
+\contentsline {subsubsection}{\numberline {5.2.3.1}c}{12}
+\contentsline {section}{\numberline {5.3}glot::function Class Reference}{13}
+\contentsline {subsection}{\numberline {5.3.1}Member Typedef Documentation}{13}
+\contentsline {subsubsection}{\numberline {5.3.1.1}double\_\discretionary {-}{}{}function}{13}
+\contentsline {subsection}{\numberline {5.3.2}Constructor \& Destructor Documentation}{13}
+\contentsline {subsubsection}{\numberline {5.3.2.1}function}{13}
+\contentsline {subsection}{\numberline {5.3.3}Member Function Documentation}{13}
+\contentsline {subsubsection}{\numberline {5.3.3.1}eval}{13}
+\contentsline {section}{\numberline {5.4}glot::grapher Class Reference}{15}
+\contentsline {subsection}{\numberline {5.4.1}Member Typedef Documentation}{16}
+\contentsline {subsubsection}{\numberline {5.4.1.1}click\_\discretionary {-}{}{}function}{16}
+\contentsline {subsubsection}{\numberline {5.4.1.2}keyboard\_\discretionary {-}{}{}function}{16}
+\contentsline {subsection}{\numberline {5.4.2}Member Function Documentation}{16}
+\contentsline {subsubsection}{\numberline {5.4.2.1}add\_\discretionary {-}{}{}curve}{16}
+\contentsline {subsubsection}{\numberline {5.4.2.2}add\_\discretionary {-}{}{}point}{17}
+\contentsline {subsubsection}{\numberline {5.4.2.3}delete\_\discretionary {-}{}{}curve}{17}
+\contentsline {subsubsection}{\numberline {5.4.2.4}delete\_\discretionary {-}{}{}point}{17}
+\contentsline {subsubsection}{\numberline {5.4.2.5}get\_\discretionary {-}{}{}x\_\discretionary {-}{}{}coord}{17}
+\contentsline {subsubsection}{\numberline {5.4.2.6}get\_\discretionary {-}{}{}y\_\discretionary {-}{}{}coord}{17}
+\contentsline {subsubsection}{\numberline {5.4.2.7}initialize}{18}
+\contentsline {subsubsection}{\numberline {5.4.2.8}redraw}{18}
+\contentsline {subsubsection}{\numberline {5.4.2.9}run}{18}
+\contentsline {subsubsection}{\numberline {5.4.2.10}set\_\discretionary {-}{}{}click\_\discretionary {-}{}{}function}{18}
+\contentsline {subsubsection}{\numberline {5.4.2.11}set\_\discretionary {-}{}{}keyboard\_\discretionary {-}{}{}function}{18}
+\contentsline {subsubsection}{\numberline {5.4.2.12}zoom}{19}
+\contentsline {section}{\numberline {5.5}glot::point Class Reference}{20}
+\contentsline {subsection}{\numberline {5.5.1}Constructor \& Destructor Documentation}{20}
+\contentsline {subsubsection}{\numberline {5.5.1.1}point}{20}
+\contentsline {subsection}{\numberline {5.5.2}Member Data Documentation}{20}
+\contentsline {subsubsection}{\numberline {5.5.2.1}c}{20}
+\contentsline {subsubsection}{\numberline {5.5.2.2}x}{20}
+\contentsline {subsubsection}{\numberline {5.5.2.3}y}{21}
+\contentsline {subsubsection}{\numberline {5.5.2.4}z}{21}
+\contentsline {chapter}{\numberline {6}File Documentation}{23}
+\contentsline {section}{\numberline {6.1}color.h File Reference}{23}
+\contentsline {section}{\numberline {6.2}curve.h File Reference}{24}
+\contentsline {section}{\numberline {6.3}function.h File Reference}{25}
+\contentsline {section}{\numberline {6.4}grapher.h File Reference}{26}
+\contentsline {section}{\numberline {6.5}point.h File Reference}{27}

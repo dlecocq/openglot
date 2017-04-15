@@ -1,0 +1,87 @@
+\section{glot::vector Class Reference}
+\label{classglot_1_1vector}\index{glot::vector@{glot::vector}}
+{\tt \#include $<$vector.h$>$}
+
+Inheritance diagram for glot::vector::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classglot_1_1vector}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf vector} (const {\bf point} \&s, const {\bf point} \&e, const {\bf color} \&col)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+void {\bf dl\_\-gen} (const {\bf screen} \&s)
+\begin{CompactList}\small\item\em Display-list generator. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+{\bf color} {\bf c}
+\begin{CompactList}\small\item\em The \doxyref{color}{p.}{classglot_1_1color} of the the \doxyref{point}{p.}{classglot_1_1point}. \item\end{CompactList}\item 
+{\bf point} {\bf start}
+\begin{CompactList}\small\item\em The endpoints of the \doxyref{vector}{p.}{classglot_1_1vector}. \item\end{CompactList}\item 
+{\bf point} {\bf end}
+\end{CompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{glot::vector@{glot::vector}!vector@{vector}}
+\index{vector@{vector}!glot::vector@{glot::vector}}
+\subsubsection[{vector}]{\setlength{\rightskip}{0pt plus 5cm}glot::vector::vector (const {\bf point} \& {\em s}, \/  const {\bf point} \& {\em e}, \/  const {\bf color} \& {\em col})\hspace{0.3cm}{\tt  [inline]}}\label{classglot_1_1vector_e0764b96dea37eae5b0c69b7a651ef44}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em s}]- the start \doxyref{point}{p.}{classglot_1_1point} \item[{\em e}]- the end \doxyref{point}{p.}{classglot_1_1point} \item[{\em col}]- the \doxyref{color}{p.}{classglot_1_1color} with which to draw \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{glot::vector@{glot::vector}!dl\_\-gen@{dl\_\-gen}}
+\index{dl\_\-gen@{dl\_\-gen}!glot::vector@{glot::vector}}
+\subsubsection[{dl\_\-gen}]{\setlength{\rightskip}{0pt plus 5cm}void glot::vector::dl\_\-gen (const {\bf screen} \& {\em s})\hspace{0.3cm}{\tt  [virtual]}}\label{classglot_1_1vector_ba40ac7886d92d63fc9d7f198643929d}
+
+
+Display-list generator. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em s}]- the \doxyref{screen}{p.}{structscreen} specs\end{description}
+\end{Desc}
+The \doxyref{screen}{p.}{structscreen} stores the dimensions of the plot, etc. and based on that information, this \doxyref{function}{p.}{classglot_1_1function} generates the geometry for the \doxyref{primitive}{p.}{classglot_1_1primitive}. Typically this might be stored in a display list, but that is up to the container class, \doxyref{grapher}{p.}{classglot_1_1grapher} 
+
+Implements {\bf glot::primitive} \doxyref{}{p.}{classglot_1_1primitive_2e8c612e7642561ae3536a865c08a436}.
+
+\subsection{Member Data Documentation}
+\index{glot::vector@{glot::vector}!c@{c}}
+\index{c@{c}!glot::vector@{glot::vector}}
+\subsubsection[{c}]{\setlength{\rightskip}{0pt plus 5cm}{\bf color} {\bf glot::vector::c}}\label{classglot_1_1vector_97ca7ee8b946ffe4b9950b6255663168}
+
+
+The \doxyref{color}{p.}{classglot_1_1color} of the the \doxyref{point}{p.}{classglot_1_1point}. 
+
+
+
+Reimplemented from {\bf glot::primitive} \doxyref{}{p.}{classglot_1_1primitive_ea0f7ab17148686a80fb68230eb09eba}.\index{glot::vector@{glot::vector}!end@{end}}
+\index{end@{end}!glot::vector@{glot::vector}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf point} {\bf glot::vector::end}}\label{classglot_1_1vector_d638e7881724375b42a4f5a14c30952b}
+
+
+\index{glot::vector@{glot::vector}!start@{start}}
+\index{start@{start}!glot::vector@{glot::vector}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf point} {\bf glot::vector::start}}\label{classglot_1_1vector_0ecc9ffc09fafe4a76f3fea9e9d9adc0}
+
+
+The endpoints of the \doxyref{vector}{p.}{classglot_1_1vector}. 
+
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf vector.h}\end{CompactItemize}

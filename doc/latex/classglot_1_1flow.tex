@@ -1,0 +1,62 @@
+\section{glot::flow Class Reference}
+\label{classglot_1_1flow}\index{glot::flow@{glot::flow}}
+\doxyref{flow}{p.}{classglot_1_1flow}: a vector-valued \doxyref{function}{p.}{classglot_1_1function} as a \doxyref{flow}{p.}{classglot_1_1flow} field  
+
+
+{\tt \#include $<$flow.h$>$}
+
+Inheritance diagram for glot::flow::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classglot_1_1flow}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf flow} (const string \&{\bf f})
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+void {\bf dl\_\-gen} (const {\bf screen} \&scr)
+\begin{CompactList}\small\item\em Display-list generator. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{flow}{p.}{classglot_1_1flow}: a vector-valued \doxyref{function}{p.}{classglot_1_1function} as a \doxyref{flow}{p.}{classglot_1_1flow} field 
+
+This class represents a vector-valued \doxyref{function}{p.}{classglot_1_1function} of x, y and t as a \doxyref{flow}{p.}{classglot_1_1flow} field using streamlines. It uses fourth-order Runge-Kutta integration to determine the next points in the line, and along the line linearly increases the alpha value. This is contrary to the ink smearing analogy, and more the comet tail analogy (in ink smearing the tail points forward, and in the comet analogy the tail points backwards). 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{glot::flow@{glot::flow}!flow@{flow}}
+\index{flow@{flow}!glot::flow@{glot::flow}}
+\subsubsection[{flow}]{\setlength{\rightskip}{0pt plus 5cm}glot::flow::flow (const string \& {\em f})\hspace{0.3cm}{\tt  [inline]}}\label{classglot_1_1flow_c4b04c5c286ea1616afdb3579a5983a5}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em func}]- the vector-valued \doxyref{function}{p.}{classglot_1_1function} to render \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{glot::flow@{glot::flow}!dl\_\-gen@{dl\_\-gen}}
+\index{dl\_\-gen@{dl\_\-gen}!glot::flow@{glot::flow}}
+\subsubsection[{dl\_\-gen}]{\setlength{\rightskip}{0pt plus 5cm}void glot::flow::dl\_\-gen (const {\bf screen} \& {\em scr})\hspace{0.3cm}{\tt  [virtual]}}\label{classglot_1_1flow_9b7fb4fd93ca8b9938b65e5810e4b596}
+
+
+Display-list generator. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em scr}]- the \doxyref{screen}{p.}{structscreen} specs of the plot\end{description}
+\end{Desc}
+This \doxyref{function}{p.}{classglot_1_1function} generates the geometry that the geometry shader expects (a set of seed points). They are uniformly spaced on a grid. 
+
+Implements {\bf glot::primitive} \doxyref{}{p.}{classglot_1_1primitive_2e8c612e7642561ae3536a865c08a436}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf flow.h}\end{CompactItemize}
